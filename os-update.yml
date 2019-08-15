@@ -1,0 +1,9 @@
+---
+# Playbook to update rhel based os
+- name: O.S update
+  hosts: all
+  gather_facts: true
+  become: true
+  yum:
+    name: '*'
+    state: latest
