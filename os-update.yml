@@ -1,9 +1,11 @@
 ---
 # Playbook to update rhel based os
-- name: O.S update
+- name: AWS EC2
   hosts: all
   gather_facts: true
   become: true
-  yum:
-    name: '*'
-    state: latest
+  tasks:
+  - name: O.S Update  
+    yum:
+      name: '*'
+      state: latest
